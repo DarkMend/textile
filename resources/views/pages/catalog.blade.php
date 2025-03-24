@@ -6,7 +6,11 @@
             <p>КАТАЛОГ</p>
             @auth
             @if(auth()->user()->role == 'admin')
-            <a class="button" href="{{ route('product.create') }}"> Добавить товар</a>
+            <div class="page-title__wrapper">
+                <a class="button" href="{{ route('category.index') }}"> Все категории</a>
+                <a class="button" href="{{ route('product.create') }}"> Добавить товар</a>
+                <a class="button" href="{{ route('category.create') }}"> Добавить категорию</a>
+            </div>
             @endif
             @endauth
         </div>

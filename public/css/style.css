@@ -204,12 +204,12 @@ section {
     width: 12px;
     height: 12px;
     border-radius: 100px;
-    border: 3px solid black;
+    border: 3px solid #D45E5E;
     background: white;
 }
 
 .slider__dots .dot.active {
-    background: black;
+    background: #D45E5E;
 }
 
 /* -------------our */
@@ -244,6 +244,7 @@ section {
 .our__wrapper-img img {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -310,9 +311,9 @@ section {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: black;
+    background: #D45E5E;
     border-radius: 20px;
-    border: 1px solid black;
+    border: 1px solid #D45E5E;
     color: white;
     font-size: 16px;
     font-weight: 700;
@@ -323,12 +324,12 @@ section {
 }
 
 .button:hover {
-    color: black;
+    color: #D45E5E;
     background: none;
 }
 
 .button.active {
-    color: black;
+    color: #D45E5E;
     background: none;
 }
 
@@ -355,7 +356,7 @@ section {
 }
 
 .input:focus {
-    border-color: black;
+    border-color: #D45E5E;
 }
 
 .file-input {
@@ -588,10 +589,10 @@ section {
     justify-content: center;
     width: 30px;
     height: 30px;
-    background: black;
+    background: #D45E5E;
     color: white;
     font-size: 16px;
-    border: 1px solid black;
+    border: 1px solid #D45E5E;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -677,4 +678,62 @@ section {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.page-title__wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.category__wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.category__wrapper-item{
+    width: 200px;
+    padding: 20px;
+    background: #b5b5b54a;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+}
+
+.category__button{
+    display: flex;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
+    
+}
+
+.category__actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.281);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.category__wrapper-item:hover .category__actions{
+    visibility: visible;
+    opacity: 1;
 }

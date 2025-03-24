@@ -33,7 +33,7 @@
                         </div>
                         @if (auth()->user()->role == 'admin')
                         <div class="order-id">
-                            Идентификатор пользователя: {{ $order->user_id }}
+                            Имя пользователя пользователя: {{ $order->user->name }}
                         </div>
                         @endif
                         <div class="actions">

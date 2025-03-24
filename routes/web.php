@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProductController;
@@ -54,4 +55,13 @@ Route::middleware('auth')->controller(OrderController::class)->name('order.')->g
     Route::get('/orders', 'index')->name('index');
     Route::post('/orders/store', 'store')->name('store');
     Route::put('/orders/{order}/change-status', 'changeStatus')->name('changeStatus')->middleware('admin');
+});
+
+Route::middleware('admin')->controller(CategoryController::class)->name('category.')->prefix('category')->group(function() {
+    Route::get('/categories', 'index')->name('index');
+    Route::get('/create', 'create')->name('create');
+    Route::post('/store', 'store')->name('store');
+    Route::get('/edit/{category}', 'edit')->name('edit');
+    Route::put('/update/{category}', 'update')->name('update');
+    Route::delete('/delete/{category}', 'destroy')->name('delete');
 });

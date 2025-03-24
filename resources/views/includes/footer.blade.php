@@ -5,7 +5,7 @@
                 <img src="{{ asset('img/logo.svg') }}" alt="">
             </div>
             <div class="menu">
-                © 2025 ООО «GuitarShop»
+                © 2025 ООО «TextileShop»
             </div>
         </div>
     </div>
