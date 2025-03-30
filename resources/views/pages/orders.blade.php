@@ -38,7 +38,7 @@
                         @endif
                         <div class="actions">
                             @if (auth()->user()->role == 'admin')
-                            @if ($order->status_id != 3)
+                            @if ($order->status_id < 3)
                             @if($order->status_id == 1)
                             <form action="{{ route('order.reject', $order->id) }}" method="post">
                                 @csrf
