@@ -7,11 +7,11 @@
             @auth
             @if (auth()->user()->role == 'admin')
             <div class="wrapper">
-                <a href="{{ route('product.edit', $product->id) }}" class="button">Редактировать</a>
+                <a href="{{ route('product.edit', $product->id) }}" class="button__action">Редактировать</a>
                 <form action="{{ route('product.delete', $product->id) }}" method="post">
                     @csrf
                     @method('delete')
-                    <button class="button">Удалить</button>
+                    <button class="button__action">Удалить</button>
                 </form>
             </div>
             @endif

@@ -2,17 +2,50 @@
 @section('content')
 <section class="slider">
     <div class="container">
+        <h1 class="page-title">
+            НАШИ НОВИНКИ
+        </h1>
         <div class="slider__wrapper">
             <div class="slider__content">
                 <div class="slide active">
-                    <img src="{{ asset('img/sl1.jpg') }}" alt="">
-                    <h2>Бархатные полотенца по отличной цене</h2>
-                    <div class="bg"></div>
+                    @foreach ($products->take(3) as $product)
+                    <div class="catalog__wrapper-item">
+                        <div class="catalog__wrapper-item__img">
+                            <img src="{{asset('/storage/' . $product->img)}}" alt="">
+                        </div>
+                        <div class="catalog__wrapper-item__wrapper">
+                            <div class="text">
+                                {{$product->title}}
+                            </div>
+                            <div class="price">
+                                {{$product->price}} руб.
+                            </div>
+                        </div>
+                        <a href="{{ route('product.show', $product->id) }}" class="catalog__wrapper-item__button button">
+                            Подробнее
+                        </a>
+                    </div>
+                    @endforeach
                 </div>
                 <div class="slide">
-                    <img src="{{ asset('img/sl2.jpg') }}" alt="">
-                    <h2>Коплект постельного белья по выгодным ценам</h2>
-                    <div class="bg"></div>
+                    @foreach ($products->slice(3)->take(3) as $product)
+                    <div class="catalog__wrapper-item">
+                        <div class="catalog__wrapper-item__img">
+                            <img src="{{asset('/storage/' . $product->img)}}" alt="">
+                        </div>
+                        <div class="catalog__wrapper-item__wrapper">
+                            <div class="text">
+                                {{$product->title}}
+                            </div>
+                            <div class="price">
+                                {{$product->price}} руб.
+                            </div>
+                        </div>
+                        <a href="{{ route('product.show', $product->id) }}" class="catalog__wrapper-item__button button">
+                            Подробнее
+                        </a>
+                    </div>
+                    @endforeach
                 </div>
             </div>
             <div class="slider__dots">
@@ -109,6 +142,11 @@
     <div class="container">
         <div class="page-title">
             МЫ НА КАРТЕ
+        </div>
+        <div class="map__info">
+            <p>г. Казань, ул. Гагарин 38</p>
+            <p>+7(894)-248-78-77</p>
+            <p>textile@mail.ru</p>
         </div>
         <div class="map__wrapper">
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A540cbe077dc6ead61fcc0a93e1fc59ead52ad60845f250a2416dc7c32509a53d&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
