@@ -59,4 +59,12 @@ class OrderController extends Controller
 
         return redirect()->route('order.index');
     } 
+
+    public function reject(Order $order){
+        $order->update([
+            'status_id' => 4
+        ]);
+
+        return redirect()->route('order.index');
+    } 
 }

@@ -89,6 +89,7 @@ section {
 .menu__content-wrapper__a .text {
     font-size: 16px;
     font-weight: 500;
+    font-family: "Inter";
 }
 
 .menu__content-wrapper__a {
@@ -616,7 +617,7 @@ section {
 
 .orders__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-top: 40px;
     gap: 40px;
 }
@@ -756,4 +757,11 @@ section {
     font-size: 16px;
     padding: 10px;
     color: #d45e5e;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
 }

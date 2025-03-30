@@ -55,6 +55,7 @@ Route::middleware('auth')->controller(OrderController::class)->name('order.')->g
     Route::get('/orders', 'index')->name('index');
     Route::post('/orders/store', 'store')->name('store');
     Route::put('/orders/{order}/change-status', 'changeStatus')->name('changeStatus')->middleware('admin');
+    Route::put('/orders/{order}/reject', 'reject')->name('reject')->middleware('admin');
 });
 
 Route::middleware('admin')->controller(CategoryController::class)->name('category.')->prefix('category')->group(function() {
