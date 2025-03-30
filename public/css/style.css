@@ -824,6 +824,7 @@ section {
 
     .page-title__left {
         flex-direction: column;
+        gap: 10px;
     }
 
     .page-title__wrapper a {
@@ -837,5 +838,16 @@ section {
 
     .orders__wrapper {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .cart__wrapper-item__start {
+        font-size: 14px;
+    }
+
+    .cart__wrapper-item {
+        flex-direction: column;
+        gap: 20px;
     }
 }
